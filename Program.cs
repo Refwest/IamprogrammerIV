@@ -21,10 +21,10 @@ class Program
         array[2] = 5;
         array[3] = 7;
 
-        int[] array2 = {1, 3, 5, 7};
+        int[] array2 = { 1, 3, 5, 7 };
 
-        int[] array3 = new int[5] { 1, 3, 5, 7, 9};
-        int[] array4 = new int[] { 1, 3, 5, 7, 9};
+        int[] array3 = new int[5] { 1, 3, 5, 7, 9 };
+        int[] array4 = new int[] { 1, 3, 5, 7, 9 };
 
         Console.WriteLine(array[0] + array[3]);
         Console.WriteLine(array2[0] + array2[3]);
@@ -32,27 +32,37 @@ class Program
         Console.WriteLine(array4[0] + array4[3]);
 
         ////!Loops with arrays
-      
+
         Console.WriteLine("\n2.\n");
 
-        int[] studentPoints = { 53, 65, 74, 49, 89, 79 };
+        int[] studentPoints = { 53, 65, 74, 49, 89, 79, 64,55,76,41,58 };
         studentPoints[0] += 3;
         studentPoints[1] += 3;
         studentPoints[2] += 3;
         studentPoints[3] += 3;
         studentPoints[4] += 3;
         studentPoints[5] += 3;
-        Console.WriteLine("Student 1 points +3 equals {0}\n",studentPoints[0]);
+        Console.WriteLine("Student 1 points +3 equals {0}\n", studentPoints[0]);
 
-        for (int i = 0; i < 6; i++)
+        for (int i = studentPoints.Length-1; i >= 0; i--)
         {
             studentPoints[i] -= 3;
             Console.WriteLine("Student {1} points equals {0}", studentPoints[i], i);
         }
 
+        ////!Foreach - loop
+        Console.WriteLine("\n3.\n");
+        foreach (int score in studentPoints)
+        {
+            Console.WriteLine("\n" + score);
+            int score2 = score + 1;
+            Console.WriteLine(score2);
+        }
 
 
-                
+
+
+
     }
 }
 
