@@ -35,7 +35,7 @@ class Program
 
         Console.WriteLine("\n2.\n");
 
-        int[] studentPoints = { 53, 65, 74, 49, 89, 79, 64,55,76,41,58 };
+        int[] studentPoints = { 53, 65, 74, 49, 89, 79, 64, 55, 76, 41, 58 };
         studentPoints[0] += 3;
         studentPoints[1] += 3;
         studentPoints[2] += 3;
@@ -44,7 +44,7 @@ class Program
         studentPoints[5] += 3;
         Console.WriteLine("Student 1 points +3 equals {0}\n", studentPoints[0]);
 
-        for (int i = studentPoints.Length-1; i >= 0; i--)
+        for (int i = studentPoints.Length - 1; i >= 0; i--)
         {
             studentPoints[i] -= 3;
             Console.WriteLine("Student {1} points equals {0}", studentPoints[i], i);
@@ -59,6 +59,28 @@ class Program
             Console.WriteLine(score2);
         }
 
+        ////!Array with loop - looking for student
+        Console.WriteLine("\n4.\n");
+        string[] students = new string[5] { "Jędrek", "Mieszko", "Antoni", "Henryk", "Amadeusz" };
+        bool presence = false;
+
+        string name = Console.ReadLine();
+        for (int i = 0; i < students.Length; i++)
+        {
+            if (name == students[i])
+            { 
+                presence = true; 
+            }
+
+        }
+        if (presence)
+        {
+            Console.WriteLine("{0} is presnent", name);
+        }
+        else
+        {
+            Console.WriteLine("Student absent");
+        }
 
 
 
