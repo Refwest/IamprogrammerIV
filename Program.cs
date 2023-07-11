@@ -62,20 +62,24 @@ class Program
         ////!Array with loop - looking for student
         Console.WriteLine("\n4.\n");
         string[] students = new string[5] { "Jędrek", "Mieszko", "Antoni", "Henryk", "Amadeusz" };
+        int[] grades = new int[5] { 5, 4, 4, 5, 3 };
         bool presence = false;
+        int studentGrade = 0;
 
         string name = Console.ReadLine();
         for (int i = 0; i < students.Length; i++)
         {
             if (name == students[i])
             { 
-                presence = true; 
+                presence = true;
+                studentGrade = grades[i];
+                break;
             }
-
         }
         if (presence)
         {
             Console.WriteLine("{0} is presnent", name);
+            Console.WriteLine("{0} got {1} from exam", name, studentGrade);
         }
         else
         {
