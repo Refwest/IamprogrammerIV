@@ -90,20 +90,28 @@ class Program
         //    ////!Useful array methods
         //    ///Binary search - Numbers in array must be in order! 
 
-        int[] myArray = { 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60 };
-        Console.WriteLine("Enter number to check");
+        //int[] myArray = { 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60 };
+        //Console.WriteLine("Enter number to check");
 
-        int searching = int.Parse(Console.ReadLine());
-        int occurrence = Array.BinarySearch(myArray, searching);
-        if (occurrence >= 0)
-        {
-            Console.WriteLine("This number is in the array it is on the {0} position", occurrence);
-        }
-        else if (occurrence < 0)
-        {
-            Console.WriteLine("This number isn't in array");
-        }
+        //int searching = int.Parse(Console.ReadLine());
+        //int occurrence = Array.BinarySearch(myArray, searching);
+        //if (occurrence >= 0)
+        //{
+        //    Console.WriteLine("This number is in the array it is on the {0} position", occurrence);
+        //}
+        //else if (occurrence < 0)
+        //{
+        //    Console.WriteLine("This number isn't in array");
+        //}
 
+        ////!Array sort method
+
+        int[] myArray = { 60, 15, 30, 25, 10, 55, 40, 45, 35, 5, 20, 50};
+        Array.Sort(myArray);
+        for (int i = 0; i < myArray.Length; i++)
+        {
+            Console.WriteLine(myArray[i]);
+        }
 
 
 
